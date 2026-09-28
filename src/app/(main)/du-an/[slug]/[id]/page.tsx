@@ -18,7 +18,8 @@ export async function generateStaticParams() {
   const data = await fetchData({
     api: 'api/v1/params/projects/buildings',
     method: 'GET',
-  })
+  }).catch(() => [])
+  if (!Array.isArray(data)) return []
   return data.map((item: {project_slug: string; building_slug: string}) => ({
     slug: item.project_slug,
     id: item.building_slug.replace('/', ''),

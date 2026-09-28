@@ -18,7 +18,8 @@ export async function generateStaticParams() {
   const data = await fetchData({
     api: 'api/v1/params/apartments',
     method: 'GET',
-  })
+  }).catch(() => [])
+  if (!Array.isArray(data)) return []
   return data.map((item: string) => ({slug: item}))
 }
 
