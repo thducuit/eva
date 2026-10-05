@@ -11,7 +11,7 @@ export default async function getMetaDataRankMath(slug: string) {
           'Content-Type': 'application/json',
         },
         next: {
-          revalidate: 60,
+          revalidate: 86400,
         },
       },
     )

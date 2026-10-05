@@ -11,7 +11,7 @@ export default async function getSchemaMarkup(slug: string) {
           'Content-Type': 'application/json',
         },
         next: {
-          revalidate: 600,
+          revalidate: 86400,
         },
       },
     )

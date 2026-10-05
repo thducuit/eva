@@ -44,7 +44,7 @@ const ApartmentPage = async ({params}: ApartmentPageProps) => {
         api: `${endpoints.apartment.list}/${slug}`,
         option: {
           next: {
-            revalidate: 60,
+            revalidate: 86400,
           },
         },
       }),
@@ -52,7 +52,7 @@ const ApartmentPage = async ({params}: ApartmentPageProps) => {
         api: `${endpoints.style.list}`,
         option: {
           next: {
-            revalidate: 60,
+            revalidate: 86400,
           },
         },
       }),

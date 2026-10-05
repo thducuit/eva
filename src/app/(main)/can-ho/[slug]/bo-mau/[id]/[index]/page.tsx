@@ -47,7 +47,7 @@ const ColorSetDetailPage = async ({params}: ColorSetDetailPageProps) => {
       api: `api/v1/apartments/${slug}/styles/${id}/${index}`,
       option: {
         next: {
-          revalidate: 60,
+          revalidate: 86400,
         },
       },
     }),

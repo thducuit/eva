@@ -63,7 +63,7 @@ const DesignStyles = ({styles, apartmentSlug}: DesignStylesProps) => {
         const res = await fetchData({
           api: `${endpoints.apartment.list}/${apartmentSlug}/${endpoints.style.detail}/${activeSlug}`,
           option: {
-            next: {revalidate: 60},
+            next: {revalidate: 86400},
           },
         })
         setDetails(Array.isArray(res) ? res : res?.data ?? [])

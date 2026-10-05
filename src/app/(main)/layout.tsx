@@ -21,7 +21,7 @@ export default async function MainLayout({
     api: endpoints.options.list,
     option: {
       next: {
-        revalidate: 60,
+        revalidate: 86400,
       },
     },
   })
