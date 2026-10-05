@@ -7,6 +7,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   images: {
+    // Serve source images directly to avoid exhausting Vercel's
+    // Image Optimization Cache Writes quota.
+    unoptimized: true,
     formats: ['image/webp'],
     minimumCacheTTL: 2678400,
     remotePatterns: [
